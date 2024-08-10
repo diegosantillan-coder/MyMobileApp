@@ -1,16 +1,30 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
+      <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>ProductList</ion-title>
+    <ion-title>Detalle de Productos</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">ProductList</ion-title>
+      <ion-title>Lista de Productos</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-label>Productos en oferta</ion-label>
+  <ion-list>
+    @for (product of products; track product._id) {
+      <ion-item>
+        <ion-thumbnail>
+          <img [alt]="product.name" [src]="product.image" />
+        </ion-thumbnail>
+        <ion-label>
+          <h2> {{product.name}} </h2>
+          <p> {{product.description}} </p>
+        </ion-label>
+      </ion-item>
+    }
+  </ion-list>
 </ion-content>

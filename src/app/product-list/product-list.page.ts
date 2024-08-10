@@ -1,17 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonButtons, IonMenuButton } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonButtons, IonMenuButton, IonList, IonItem, IonLabel, IonThumbnail, IonBackButton } from '@ionic/angular/standalone';
+import { Product } from '../core/interfaces/product.interface';
+import { ProductsService } from '../service/products.service';
 
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.page.html',
   styleUrls: ['./product-list.page.scss'],
   standalone: true,
-  imports: [IonButtons, IonContent, IonHeader, IonTitle, IonToolbar,IonMenuButton, CommonModule, FormsModule]
+  imports: [IonBackButton, IonLabel, IonItem, IonList, IonButtons, IonContent, IonHeader, IonTitle, IonToolbar,IonMenuButton,IonThumbnail, CommonModule, FormsModule]
 })
-export class ProductListPage  {
+export class ProductListPage implements OnInit  {
 
-  constructor() { }
+products: Product[] = [];
+productService = inject(ProductsService)
+
+async ngOnInit() {
+  const response = await this.productService.getAll();
+  this.products = response.results;
+}
 
 }
