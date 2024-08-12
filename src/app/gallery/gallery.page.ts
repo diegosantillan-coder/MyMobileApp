@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonBackButton, IonButton, IonButtons, IonFab, IonFabButton, IonIcon, IonImg } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonBackButton, IonButton, IonButtons, IonFab, IonFabButton, IonIcon, IonImg, IonGrid, IonRow, IonCol } from '@ionic/angular/standalone';
 import { PhotosService } from '../service/photos.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { PhotosService } from '../service/photos.service';
   templateUrl: './gallery.page.html',
   styleUrls: ['./gallery.page.scss'],
   standalone: true,
-  imports: [IonImg, IonIcon, IonFabButton, IonFab, IonButtons, IonButton, IonBackButton, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  imports: [IonCol, IonRow, IonGrid, IonImg, IonIcon, IonFabButton, IonFab, IonButtons, IonButton, IonBackButton, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
 })
 export class GalleryPage   {
 
