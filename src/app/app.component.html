@@ -9,16 +9,20 @@
       <ion-list>
         <ion-menu-toggle>
           <ion-item button [routerLink]="['/main']">
-            <ion-icon slot="start" name="home"></ion-icon>
+            <ion-icon slot="start" name="home-outline"></ion-icon>
             <ion-label> Home </ion-label>
           </ion-item>
           <ion-item button [routerLink]="['/product-list']">
-            <ion-icon slot="start" name="cube"></ion-icon>
+            <ion-icon slot="start" name="cube-outline"></ion-icon>
             <ion-label> Productos</ion-label>
           </ion-item>
           <ion-item button [routerLink]="['/gallery']">
-            <ion-icon slot="start" name="images"></ion-icon>
+            <ion-icon slot="start" name="images-outline"></ion-icon>
             <ion-label> Galería</ion-label>
+          </ion-item>
+          <ion-item button [routerLink]="['/qr-generator']">
+            <ion-icon slot="start" name="qr-code-outline"></ion-icon>
+            <ion-label> QR App</ion-label>
           </ion-item>
         </ion-menu-toggle>
       </ion-list>

@@ -14,7 +14,11 @@ export const routes: Routes = [
     loadComponent: () => import('./gallery/gallery.page').then( m => m.GalleryPage)
   },
   {
+    path: 'qr-generator',
+    loadComponent: () => import('./qr-generator/qr-generator.page').then( m => m.QrGeneratorPage)
+  },
+  {
     path: '**',
     redirectTo: 'main'
-  }
+  },
 ];
