@@ -8,13 +8,18 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+    @for (photo of photos; track $index) {
+      <ion-img [src]="photo"></ion-img>
+    }
+
+
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">gallery</ion-title>
     </ion-toolbar>
   </ion-header>
   <ion-fab vertical="bottom" horizontal="center" slot="fixed">
-    <ion-fab-button>
+    <ion-fab-button (click)="takePhoto()" onKeyPress="" onKeyDown="" onKeyUp="">
       <ion-icon name="camera"></ion-icon>
     </ion-fab-button>
   </ion-fab>
