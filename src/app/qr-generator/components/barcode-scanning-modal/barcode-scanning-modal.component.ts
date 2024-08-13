@@ -16,6 +16,7 @@ import {
   LensFacing,
   StartScanOptions,
 } from '@capacitor-mlkit/barcode-scanning';
+import { Utilities } from '@core/constants/utilities.constants';
 import { ModalController } from '@ionic/angular';
 import {
   IonButton,
@@ -27,7 +28,6 @@ import {
   IonIcon,
   IonToolbar,
 } from '@ionic/angular/standalone';
-import { Utilities } from 'src/app/core/constants/utilities.constants';
 
 @Component({
   selector: 'app-barcode-scanning-modal',

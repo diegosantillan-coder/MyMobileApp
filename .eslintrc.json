@@ -13,7 +13,7 @@
     "no-empty": "warn",
     "no-eq-null": "warn",
     "no-floating-decimal": "error",
-    "no-magic-numbers": ["warn", { "ignore": [-1, 0, 1, 2] }],
+    "no-magic-numbers": ["warn", { "ignore": [-1, 0, 1, 2, 3] }],
     "no-nested-ternary": "warn",
     "no-new": "error"
   },
