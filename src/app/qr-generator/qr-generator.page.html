@@ -21,7 +21,7 @@
 
   @if (segment === 'scan') {
   <!-- ==== Scan QR ====-->
-  <app-scan-qr></app-scan-qr>>
+  <app-scan-qr></app-scan-qr>
   } @else {
   <!-- ==== Generate QR ====-->
  <app-generate-qr [qrText]="qrText" (eventoScreen)="captureScreen()"></app-generate-qr>
