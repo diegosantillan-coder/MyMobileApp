@@ -1,0 +1,38 @@
+<div class="segment">
+  <div class="segment-content">
+    <div id="qrImage">
+      <div class="d-flex-center">
+          <div class="d-flex-center qr-wrapper">
+            @if (!qrText) {
+              <img class="qr-placeholder" src="assets/images/qr.webp" alt="">
+            } @else {
+              <qr-code [value]="qrText"
+              size="190"
+              errorCorrectionLevel="M" />
+            }
+          </div>
+      </div>
+      <div class="ion-padding-top">
+        {{qrText}}
+      </div>
+    </div>
+    <ion-textarea
+    class="ion-padding-top"
+    label="Escribre algo para convertir a código QR"
+    labelPlacement="stacked"
+    fill="outline"
+    [(ngModel)]="qrText"
+    rows="4"
+    [autoGrow]="true"
+    >
+    </ion-textarea>
+      <!-- ==== Shared QR ====-->
+      @if (qrText) {
+        <ion-button (click)="captureScreen()"
+        class="submit ion-margin-top" expand="block">
+          Compartir
+          <ion-icon slot="end" name="share-social-outline"></ion-icon>
+         </ion-button>
+      }
+  </div>
+</div>
