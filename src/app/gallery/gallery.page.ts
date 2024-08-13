@@ -1,26 +1,57 @@
-import { Component, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonBackButton, IonButton, IonButtons, IonFab, IonFabButton, IonIcon, IonImg, IonGrid, IonRow, IonCol } from '@ionic/angular/standalone';
-import { PhotosService } from '../service/photos.service';
+import { CommonModule } from '@angular/common'
+import { Component, inject } from '@angular/core'
+import { FormsModule } from '@angular/forms'
+import {
+  IonBackButton,
+  IonButton,
+  IonButtons,
+  IonCol,
+  IonContent,
+  IonFab,
+  IonFabButton,
+  IonGrid,
+  IonHeader,
+  IonIcon,
+  IonImg,
+  IonRow,
+  IonTitle,
+  IonToolbar,
+} from '@ionic/angular/standalone'
+import { PhotosService } from '../service/photos.service'
 
 @Component({
   selector: 'app-gallery',
   templateUrl: './gallery.page.html',
   styleUrls: ['./gallery.page.scss'],
   standalone: true,
-  imports: [IonCol, IonRow, IonGrid, IonImg, IonIcon, IonFabButton, IonFab, IonButtons, IonButton, IonBackButton, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  imports: [
+    IonCol,
+    IonRow,
+    IonGrid,
+    IonImg,
+    IonIcon,
+    IonFabButton,
+    IonFab,
+    IonButtons,
+    IonButton,
+    IonBackButton,
+    IonContent,
+    IonHeader,
+    IonTitle,
+    IonToolbar,
+    CommonModule,
+    FormsModule,
+  ],
 })
-export class GalleryPage   {
+export class GalleryPage {
+  photos: string[] = []
+  photoService = inject(PhotosService)
 
-  photos: string[] = [];
-  photoService = inject(PhotosService);
-
-  constructor(){
-    this.photos = this.photoService.photos;
+  constructor() {
+    this.photos = this.photoService.photos
   }
 
-  async takePhoto() {
-    await this.photoService.addNewPhoto();
+  async takePhoto(): Promise<void> {
+    await this.photoService.addNewPhoto()
   }
 }

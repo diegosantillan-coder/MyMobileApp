@@ -1,24 +1,24 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { IonicModule } from '@ionic/angular';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing'
+import { IonicModule } from '@ionic/angular'
 
-import { GenerateQrComponent } from './generate-qr.component';
+import { GenerateQrComponent } from './generate-qr.component'
 
 describe('GenerateQrComponent', () => {
-  let component: GenerateQrComponent;
-  let fixture: ComponentFixture<GenerateQrComponent>;
+  let component: GenerateQrComponent
+  let fixture: ComponentFixture<GenerateQrComponent>
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ GenerateQrComponent ],
-      imports: [IonicModule.forRoot()]
-    }).compileComponents();
+      declarations: [GenerateQrComponent],
+      imports: [IonicModule.forRoot()],
+    }).compileComponents()
 
-    fixture = TestBed.createComponent(GenerateQrComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  }));
+    fixture = TestBed.createComponent(GenerateQrComponent)
+    component = fixture.componentInstance
+    fixture.detectChanges()
+  }))
 
   it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+    expect(component).toBeTruthy()
+  })
+})

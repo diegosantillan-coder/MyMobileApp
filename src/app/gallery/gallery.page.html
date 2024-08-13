@@ -10,15 +10,13 @@
 <ion-content [fullscreen]="true">
   <ion-grid>
     <ion-row>
-        @for (photo of photos; track $index) {
-          <ion-col size="6" sizeMd="3">
-            <ion-img [src]="photo"></ion-img>
-          </ion-col>
-        }
+      @for (photo of photos; track $index) {
+      <ion-col size="6" sizeMd="3">
+        <ion-img [src]="photo"></ion-img>
+      </ion-col>
+      }
     </ion-row>
-
   </ion-grid>
-
 
   <ion-header collapse="condense">
     <ion-toolbar>
