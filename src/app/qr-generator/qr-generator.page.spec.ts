@@ -1,17 +1,17 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing'
-import { QrGeneratorPage } from './qr-generator.page'
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { QrGeneratorPage } from './qr-generator.page';
 
 describe('QrGeneratorPage', () => {
-  let component: QrGeneratorPage
-  let fixture: ComponentFixture<QrGeneratorPage>
+  let component: QrGeneratorPage;
+  let fixture: ComponentFixture<QrGeneratorPage>;
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(QrGeneratorPage)
-    component = fixture.componentInstance
-    fixture.detectChanges()
-  })
+    fixture = TestBed.createComponent(QrGeneratorPage);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
   it('should create', () => {
-    expect(component).toBeTruthy()
-  })
-})
+    expect(component).toBeTruthy();
+  });
+});

@@ -1,5 +1,5 @@
-import { Component } from '@angular/core'
-import { IonButton, IonCol, IonIcon, IonRow } from '@ionic/angular/standalone'
+import { Component } from '@angular/core';
+import { IonButton, IonCol, IonIcon, IonRow } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-scan-qr',

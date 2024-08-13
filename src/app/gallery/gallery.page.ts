@@ -1,6 +1,6 @@
-import { CommonModule } from '@angular/common'
-import { Component, inject } from '@angular/core'
-import { FormsModule } from '@angular/forms'
+import { CommonModule } from '@angular/common';
+import { Component, inject } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import {
   IonBackButton,
   IonButton,
@@ -16,8 +16,8 @@ import {
   IonRow,
   IonTitle,
   IonToolbar,
-} from '@ionic/angular/standalone'
-import { PhotosService } from '../service/photos.service'
+} from '@ionic/angular/standalone';
+import { PhotosService } from '../service/photos.service';
 
 @Component({
   selector: 'app-gallery',
@@ -44,14 +44,14 @@ import { PhotosService } from '../service/photos.service'
   ],
 })
 export class GalleryPage {
-  photos: string[] = []
-  photoService = inject(PhotosService)
+  photos: string[] = [];
+  photoService = inject(PhotosService);
 
   constructor() {
-    this.photos = this.photoService.photos
+    this.photos = this.photoService.photos;
   }
 
   async takePhoto(): Promise<void> {
-    await this.photoService.addNewPhoto()
+    await this.photoService.addNewPhoto();
   }
 }

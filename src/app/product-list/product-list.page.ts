@@ -1,7 +1,7 @@
-import { CommonModule } from '@angular/common'
-import { Component, inject, OnInit } from '@angular/core'
-import { FormsModule } from '@angular/forms'
-import { Router } from '@angular/router'
+import { CommonModule } from '@angular/common';
+import { Component, inject, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 import {
   IonBackButton,
   IonButtons,
@@ -14,9 +14,9 @@ import {
   IonThumbnail,
   IonTitle,
   IonToolbar,
-} from '@ionic/angular/standalone'
-import { Product } from '../core/interfaces/product.interface'
-import { ProductsService } from '../service/products.service'
+} from '@ionic/angular/standalone';
+import { Product } from '../core/interfaces/product.interface';
+import { ProductsService } from '../service/products.service';
 
 @Component({
   selector: 'app-product-list',
@@ -40,12 +40,12 @@ import { ProductsService } from '../service/products.service'
   ],
 })
 export class ProductListPage implements OnInit {
-  products: Product[] = []
-  productService = inject(ProductsService)
+  products: Product[] = [];
+  productService = inject(ProductsService);
 
   async ngOnInit(): Promise<void> {
-    const response = await this.productService.getAll()
-    this.products = response.results
+    const response = await this.productService.getAll();
+    this.products = response.results;
     //console.log('Current Navigation:', this.router.getCurrentNavigation())
   }
 

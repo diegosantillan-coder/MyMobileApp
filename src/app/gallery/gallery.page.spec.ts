@@ -1,17 +1,17 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing'
-import { GalleryPage } from './gallery.page'
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { GalleryPage } from './gallery.page';
 
 describe('GalleryPage', () => {
-  let component: GalleryPage
-  let fixture: ComponentFixture<GalleryPage>
+  let component: GalleryPage;
+  let fixture: ComponentFixture<GalleryPage>;
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GalleryPage)
-    component = fixture.componentInstance
-    fixture.detectChanges()
-  })
+    fixture = TestBed.createComponent(GalleryPage);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
   it('should create', () => {
-    expect(component).toBeTruthy()
-  })
-})
+    expect(component).toBeTruthy();
+  });
+});

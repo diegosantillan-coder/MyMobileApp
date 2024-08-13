@@ -1,17 +1,17 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing'
-import { ProductListPage } from './product-list.page'
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ProductListPage } from './product-list.page';
 
 describe('ProductListPage', () => {
-  let component: ProductListPage
-  let fixture: ComponentFixture<ProductListPage>
+  let component: ProductListPage;
+  let fixture: ComponentFixture<ProductListPage>;
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ProductListPage)
-    component = fixture.componentInstance
-    fixture.detectChanges()
-  })
+    fixture = TestBed.createComponent(ProductListPage);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
   it('should create', () => {
-    expect(component).toBeTruthy()
-  })
-})
+    expect(component).toBeTruthy();
+  });
+});

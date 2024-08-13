@@ -1,17 +1,17 @@
-import { HttpClient } from '@angular/common/http'
-import { inject, Injectable } from '@angular/core'
-import { firstValueFrom } from 'rxjs'
-import { ProductResponse } from '../core/models/product.class'
+import { HttpClient } from '@angular/common/http';
+import { inject, Injectable } from '@angular/core';
+import { firstValueFrom } from 'rxjs';
+import { ProductResponse } from '../core/models/product.class';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ProductsService {
-  private httpClient = inject(HttpClient)
+  private httpClient = inject(HttpClient);
 
   async getAll(): Promise<ProductResponse> {
     return firstValueFrom(
-      this.httpClient.get<ProductResponse>('https://peticiones.online/api/products'),
-    )
+      this.httpClient.get<ProductResponse>('https://peticiones.online/api/products')
+    );
   }
 }

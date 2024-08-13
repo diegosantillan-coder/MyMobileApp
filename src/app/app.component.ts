@@ -1,5 +1,5 @@
-import { Component } from '@angular/core'
-import { RouterLink } from '@angular/router'
+import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import {
   IonApp,
   IonContent,
@@ -12,7 +12,7 @@ import {
   IonRouterOutlet,
   IonTitle,
   IonToolbar,
-} from '@ionic/angular/standalone'
+} from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-root',
