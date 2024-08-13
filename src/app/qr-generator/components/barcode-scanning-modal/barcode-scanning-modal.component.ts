@@ -17,7 +17,6 @@ import {
   StartScanOptions,
 } from '@capacitor-mlkit/barcode-scanning';
 import { Utilities } from '@core/constants/utilities.constants';
-import { ModalController } from '@ionic/angular';
 import {
   IonButton,
   IonButtons,
@@ -27,6 +26,7 @@ import {
   IonHeader,
   IonIcon,
   IonToolbar,
+  ModalController,
 } from '@ionic/angular/standalone';
 
 @Component({

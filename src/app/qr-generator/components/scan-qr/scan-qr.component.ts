@@ -1,5 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { BarcodeScanner, LensFacing } from '@capacitor-mlkit/barcode-scanning';
+import { FilePicker } from '@capawesome/capacitor-file-picker';
 import {
   IonButton,
   IonCol,
@@ -42,6 +43,7 @@ export class ScanQrComponent implements OnInit {
     }
   }
 
+  //Scanerar el QR de una imagen y guardar el resultado
   async startScan(): Promise<void> {
     const modal = await this.modalController.create({
       component: BarcodeScanningModalComponent,
@@ -58,5 +60,20 @@ export class ScanQrComponent implements OnInit {
     if (data) {
       this.scantResult = data?.barcode?.displayValue;
     }
+  }
+
+  //Lee el QR de una imagen y guardar el resultado
+  async readBarCodeFromImage(): Promise<void> {
+    const { files } = await FilePicker.pickImages();
+
+    const path = files[0]?.path;
+    if (!path) return;
+
+    const { barcodes } = await BarcodeScanner.readBarcodesFromImage({
+      path,
+      formats: [],
+    });
+
+    this.scantResult = barcodes[0].displayValue;
   }
 }
