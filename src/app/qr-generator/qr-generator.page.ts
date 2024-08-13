@@ -13,10 +13,10 @@ import {
   IonToolbar,
   Platform,
 } from '@ionic/angular/standalone';
+import { GenerateQrComponent } from '@qr-generator/components/generate-qr/generate-qr.component';
+import { ScanQrComponent } from '@qr-generator/components/scan-qr/scan-qr.component';
+import { CanvasService } from '@qr-generator/services/canvas/canvas.service';
 import html2canvas from 'html2canvas';
-import { GenerateQrComponent } from './components/generate-qr/generate-qr.component';
-import { ScanQrComponent } from './components/scan-qr/scan-qr.component';
-import { CanvasService } from './services/canvas/canvas.service';
 
 @Component({
   selector: 'app-qr-generator',

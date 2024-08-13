@@ -19,7 +19,15 @@
     "target": "es2022",
     "module": "es2020",
     "lib": ["es2018", "dom"],
-    "useDefineForClassFields": false
+    "useDefineForClassFields": false,
+    "paths": {
+      "@services/*": ["src/app/services/*"],
+      "@core/*": ["src/app/core/*"],
+      "@gallery/*": ["src/app/gallery/*"],
+      "@main/*": ["src/app/main/*"],
+      "@product-list/*": ["src/app/product-list/*"],
+      "@qr-generator/*": ["src/app/qr-generator/*"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

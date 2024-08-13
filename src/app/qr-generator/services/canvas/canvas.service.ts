@@ -1,7 +1,7 @@
 import { inject, Injectable } from '@angular/core';
 import { Directory, Filesystem } from '@capacitor/filesystem';
 import { Share } from '@capacitor/share';
-import { LoadingService } from '../loading/loading.service';
+import { LoadingService } from '@qr-generator/services/loading/loading.service';
 
 @Injectable({
   providedIn: 'root',

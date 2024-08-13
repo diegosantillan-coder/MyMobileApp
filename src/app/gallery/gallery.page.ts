@@ -17,7 +17,7 @@ import {
   IonTitle,
   IonToolbar,
 } from '@ionic/angular/standalone';
-import { PhotosService } from '../service/photos.service';
+import { PhotosService } from '@services/photos/photos.service';
 
 @Component({
   selector: 'app-gallery',

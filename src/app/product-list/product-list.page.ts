@@ -16,7 +16,7 @@ import {
   IonToolbar,
 } from '@ionic/angular/standalone';
 import { Product } from '../core/interfaces/product.interface';
-import { ProductsService } from '../service/products.service';
+import { ProductsService } from '../services/products/products.service';
 
 @Component({
   selector: 'app-product-list',
